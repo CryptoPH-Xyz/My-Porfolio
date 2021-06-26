@@ -1,17 +1,86 @@
 import React, { useState } from 'react';
+import Profile from '../pictures/Sidebar-Xyz.png';
+import Avatar from '../pictures/Avatar-Xyz.png';
 
 export default function Navbar() {
     const [showMenu, setShowMenu] = useState(false);
+    const [showSidebar, setShowSidebar] = useState(false);
 
     const handleMenu = () => {
         setShowMenu(oldValue => !oldValue)
     }
 
+    const handleSidebar = () => {
+        setShowSidebar(oldValue => !oldValue)
+    }
+
     return (
         <div className="navbar" id="navbar">
+            {showSidebar ?
+                <div className="sidebar-container" id="sidebar">
+                    <div className="sidebar-content">
+                        <h2>Hi, I'm Xyz Fiegalan</h2>
+                        <i className="uil uil-eye-slash sidebar-close" onClick={handleSidebar} id="sidebar-close"></i>
+                    </div>
+                    <div className="sidebar-content">
+                        <div className="sidebar-social">
+                            <a href="https://www.linkedin.com/in/xyz-fiegalan-253592136/" className="sidebar-social-icon">
+                                <i className="uil uil-linkedin-alt"></i>
+                            </a>
+                            <a href="https://github.com/CryptoPH-Xyz" className="sidebar-social-icon">
+                                <i className="uil uil-github-alt"></i>
+                            </a>
+                            <a href="https://www.instagram.com/xyz_rf/" className="sidebar-social-icon">
+                                <i className="uil uil-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/XyzFiegalan" className="sidebar-social-icon">
+                                <i className="uil uil-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/XyzFiegs" className="sidebar-social-icon">
+                                <i className="uil uil-twitter-alt"></i>
+                            </a>
+                        </div>
+                        <img src={Profile} alt="Profile" className="sidebar-profile"/>
+                    </div>
+
+                    <div className="sidebar-data">
+                        <p className="sidebar-description">
+                            Blockchain Developer that believes in <b> Decentralization </b> 
+                            as means to achieve <i>Financial Inclusion</i>.
+                        </p>
+                    </div>
+                        <div className="sidebar-buttons">
+                            <a download="" href="" className="button button-flex">
+                                Download CV <i className="uil uil-download-alt button-icon"></i>
+                            </a>
+                        </div>
+                    <div className="sidebar-contact-data">
+                        <div className="sidebar-info">
+                            <i className="uil uil-envelope-alt sidebar-icon"></i>
+                            <div>
+                                <h3 className="sidebar-title">Email</h3> 
+                                <span className="sidebar-subtitle">xyzfiegalan@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div className="sidebar-info">
+                            <i className="uil uil-mobile-android-alt sidebar-icon"></i>
+                            <div>
+                                <h3 className="sidebar-title">Mobile</h3>
+                                <span className="sidebar-subtitle">(+63) 977-679-0375</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="sidebar-buttons">
+                        <a href="#contact" className="button button-flex">
+                            Contact Me <i className="uil uil-comment-dots button-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            : null}
             <div className="nav">
-                <a href="#sidebar" className="nav-logo">
-                    <i className="uil uil-user nav-icon"></i>Xyz
+                <a href="#sidebar" onClick={handleSidebar}>
+                    <img src={Avatar} alt="Avatar" className="nav-avatar" />
                 </a>
                 {showMenu ?
                 <div className="nav-menu" id="nav-menu">

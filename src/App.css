@@ -118,6 +118,31 @@ img{
   gap: 1.5rem;
 }
 
+/********************* BUTTONS **********************/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: .7rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+}
+
+.button:hover {
+  background-color: var(--first-color-hover);
+}
+
+.button-icon {
+  font-size: 1.2rem;
+  margin-left: 0.25rem;
+  transition: .3s;
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
 /********************* NAVBAR **********************/
 .navbar {
   width: 100%;
@@ -129,7 +154,7 @@ img{
 }
 
 .nav {
-  height: var(--header-height);
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -137,17 +162,22 @@ img{
   padding: 0 2.5rem 0;
 }
 
-.nav-logo, .nav-toggle {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
+.nav-avatar {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.nav-logo:hover {
-  color: var(--first-color-hover);
+.nav-avatar:hover {
   cursor: pointer;
+  box-shadow: 1px 1px 3px var(--shadow-color);
+  transform: scale(1.1);
 }
 
 .nav-toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -164,7 +194,7 @@ img{
     width: 100%;
     background-color: var(--body-color);
     padding: 2rem 1.5rem 2rem;
-    box-shadow: 0 -1px 5px var(--title-color);
+    box-shadow: 0 -1px 5px var(--shadow-color);
     border-radius: 0 0 1.5rem 1.5rem;
     transition: .3s;
   }
@@ -204,4 +234,103 @@ img{
 
 .nav-close:hover {
   color: var(--first-color-hover);
+}
+
+/********************* SIDEBAR **********************/
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 27vw;
+  width: 24vw;
+  min-width: 20rem;
+  height: 100vh;
+  background-color: var(--body-color);
+  padding: 2rem 1.5rem 2rem;
+  box-shadow: 0 0 2px var(--title-color);
+  border-radius: 0 1.5rem 1.5rem 0;
+  transition: .3s;
+  z-index: var(--z-fixed);
+}
+
+
+.sidebar-close {
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.sidebar-close:hover {
+  color: var(--first-color-hover);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.sidebar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-social {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+}
+
+.sidebar-social-icon {
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.sidebar-social-icon:hover {
+  color: var(--first-color-hover);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.sidebar-profile {
+  width: 17rem;
+}
+
+.sidebar-description {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sidebar-info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.sidebar-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-contact-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.sidebar-info {
+  display: flex;
+}
+
+.sidebar-icon {
+  font-size: 1.25rem;
+  color: var(--first-color);
+  margin-right: 0.5rem;
+}
+
+.sidebar-title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.sidebar-subtitle {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
 }
