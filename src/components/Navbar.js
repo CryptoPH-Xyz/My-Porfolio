@@ -19,7 +19,7 @@ export default function Navbar() {
             {showSidebar ?
                 <div className="sidebar-container" id="sidebar">
                     <div className="sidebar-content">
-                        <h2>Hi, I'm Xyz Fiegalan</h2>
+                        <h2>Hi, I'm Xyz</h2>
                         <i className="uil uil-eye-slash sidebar-close" onClick={handleSidebar} id="sidebar-close"></i>
                     </div>
                     <div className="sidebar-content">
