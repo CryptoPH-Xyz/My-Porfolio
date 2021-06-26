@@ -1,38 +1,207 @@
-.App {
+/********************* UNICONS **********************/
+@import url("https://unicons.iconscout.com/release/v4.0.0/css/line.css");
+
+/********************* GOOGLE FONTS **********************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+  --header-height: 3rem;
+
+  --first-color: hsl(176, 80%, 35%);
+  --first-color-second: hsl(176, 58%, 50%);
+  --first-color-hover: hsl(176, 74%, 28%); /*alt*/
+  --first-color-lighter: hsl(176, 92%, 70%);
+  --title-color: hsl(176, 86%, 5%);
+  --text-color: #000;
+  --text-color-light: hsl(176, 8%, 35%);
+  --input-color: hsl(176, 70%, 80%);
+  --body-color: hsl(176, 60%, 99%);
+  --container-color: #FFF;
+
+  --shadow-color: hsl(176, 65%, 20%);
+
+  --body-font: 'Montserrat', sans-serif;
+
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/********************* BASE **********************/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+h1,h2,h3,h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/********************* REUSABLE **********************/
+.section{
+  padding: 4rem 0 2rem;
+}
+
+.section-title {
+  font-size: var(--h1-font-size);
+}
+
+.section-subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 2rem;
+  font-weight: var(--font-semi-bold);
+  color: var(--second-color);
+}
+
+.section-title, .section-subtitle {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/********************* LAYOUT **********************/
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/********************* NAVBAR **********************/
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -1px 5px var(--shadow-color);
+  padding: 0 2.5rem 0;
+}
+
+.nav-logo, .nav-toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav-logo:hover {
+  color: var(--first-color-hover);
+  cursor: pointer;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: var(--first-color-hover);
+}
+
+@media screen {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 2rem;
+    box-shadow: 0 -1px 5px var(--title-color);
+    border-radius: 0 0 1.5rem 1.5rem;
+    transition: .3s;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.nav-link {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link:hover {
+  color: var(--first-color-hover);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-icon {
+  font-size: 1.2rem;
+  margin-right: 0.25rem;
+}
+
+.nav-close {
+  position: absolute;
+  right: 1.3rem;
+  bottom: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--first-color);
+}
+
+.nav-close:hover {
+  color: var(--first-color-hover);
 }
