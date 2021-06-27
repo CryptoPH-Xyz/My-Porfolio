@@ -17,7 +17,7 @@ export default function Navbar() {
     return (
         <div className="navbar" id="navbar">
             {showSidebar ?
-                <div className="sidebar-container" id="sidebar">
+                <div className="sidebar-container">
                     <div className="sidebar-content">
                         <h2>Hi, I'm Xyz</h2>
                         <i className="uil uil-eye-slash sidebar-close" onClick={handleSidebar} id="sidebar-close"></i>
@@ -50,8 +50,8 @@ export default function Navbar() {
                         </p>
                     </div>
                         <div className="sidebar-buttons">
-                            <a download="" href="" className="button button-flex">
-                                Download CV <i className="uil uil-download-alt button-icon"></i>
+                            <a download="" href="" className="button button-flex sidebar-button">
+                                Download CV <i className="uil uil-download-alt button-icon-down"></i>
                             </a>
                         </div>
                     <div className="sidebar-contact-data">
@@ -72,16 +72,16 @@ export default function Navbar() {
                         </div>
                     </div>
                     <div className="sidebar-buttons">
-                        <a href="#contact" className="button button-flex">
+                        <a href="#contact" className="button button-flex sidebar-button">
                             Contact Me <i className="uil uil-comment-dots button-icon"></i>
                         </a>
                     </div>
                 </div>
             : null}
             <div className="nav">
-                <a href="#sidebar" onClick={handleSidebar}>
+                <div onClick={handleSidebar}>
                     <img src={Avatar} alt="Avatar" className="nav-avatar" />
-                </a>
+                </div>
                 {showMenu ?
                 <div className="nav-menu" id="nav-menu">
                     <ul className="nav-list grid">
@@ -121,7 +121,7 @@ export default function Navbar() {
                 : null}
                 <div className="nav-btns">
                     <div className="nav-toggle" id="nav-toggle">
-                    <i className="uil uil-bars" onClick={handleMenu}></i>
+                        <i className="uil uil-bars" onClick={handleMenu}></i>
                     </div>
                 </div>
             </div>

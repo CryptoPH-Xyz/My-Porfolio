@@ -32,12 +32,12 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="home-buttons">
-                    <a download="" href="src/pdf/Resume.pdf" className="button button--flex">
-                        Download CV <i className="uil uil-download-alt button-icon"></i>
+                    <a download="" href="src/pdf/Resume.pdf" className="button button-flex home-button">
+                        Download CV <i className="uil uil-download-alt button-icon-down"></i>
                     </a>
 
-                    <a href="#contact" className="button button-flex">
-                            Contact Me <i className="uil uil-comment-dots button-icon"></i>
+                    <a href="#contact" className="button button-flex home-button">
+                        Contact Me <i className="uil uil-comment-dots button-icon"></i>
                     </a>
                 </div>
                 <div className="home-social">

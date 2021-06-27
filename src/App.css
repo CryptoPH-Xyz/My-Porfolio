@@ -132,7 +132,7 @@ img{
   background-color: var(--first-color-hover);
 }
 
-.button-icon {
+.button-icon, .button-icon-down{
   font-size: 1.2rem;
   margin-left: 0.25rem;
   transition: .3s;
@@ -308,6 +308,14 @@ img{
   justify-content: center;
 }
 
+.sidebar-button:hover .button-icon-down {
+  transform: translateY(.25rem);
+}
+
+.sidebar-button:hover .button-icon {
+  transform: translateX(.25rem);
+}
+
 .sidebar-contact-data {
   display: flex;
   flex-direction: column;
@@ -401,6 +409,14 @@ img{
   justify-content: space-evenly;
 }
 
+.home-button:hover .button-icon {
+  transform: translateX(.25rem);
+}
+
+.home-button:hover .button-icon-down {
+  transform: translateY(.25rem);
+}
+
 .home-social {
   display: flex;
   justify-content: center;
@@ -481,4 +497,44 @@ img{
   height: 100%;
   background-color: var(--first-color);
   transform: translate(6px, -7px);
+}
+
+/********************* PROJECT **********************/
+.project-content {
+  padding: 1rem 2rem 1rem;
+  box-shadow: -.2rem .4rem .3rem var(--shadow-color);
+  border: .1rem solid var(--shadow-color);
+  border-radius: 1rem;
+  background-color: var(--body-color);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0 0.8rem;
+}
+
+.project-switch {
+  color: var(--first-color);
+}
+
+.project-switch:hover {
+  color: var(--first-color-hover);
+  font-size: var(--font-semi-bold);
+  cursor: pointer;
+}
+
+.project-img {
+  border-radius: .5rem;
+  box-shadow: -.1rem .1rem .5rem var(--shadow-color);
+}
+
+.project-buttons {
+  padding: 1rem 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.project-button:hover .button-icon {
+  transform: translateX(.25rem);
 }
