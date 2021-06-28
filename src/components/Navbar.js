@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Profile from '../pictures/Sidebar-Xyz.png';
 import Avatar from '../pictures/Avatar-Xyz.png';
+import Resume from '../pdf/Resume.pdf';
 
 export default function Navbar() {
     const [showMenu, setShowMenu] = useState(false);
@@ -50,7 +51,7 @@ export default function Navbar() {
                         </p>
                     </div>
                         <div className="sidebar-buttons">
-                            <a download="" href="" className="button button-flex sidebar-button">
+                            <a download="" href={Resume} className="button button-flex sidebar-button">
                                 Download CV <i className="uil uil-download-alt button-icon-down"></i>
                             </a>
                         </div>

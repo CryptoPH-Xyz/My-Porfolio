@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import ResumePic from '../pictures/pdf/Xyz-Resume.png';
+import Resume from '../pdf/Resume.pdf';
 
 export default function Experience() {   
     const [education, setEducation] = useState(true);
     const [work, setWork] = useState(false);
+    const [resume, setResume] = useState(false);
 
     const workSwitch = () => {
         setEducation(false);
@@ -12,6 +15,10 @@ export default function Experience() {
     const educationSwitch = () => {
         setEducation(true);
         setWork(false);
+    }
+
+    const resumeSwitch = () => {
+        setResume(old => !old)
     }
 
     return (
@@ -106,14 +113,27 @@ export default function Experience() {
                     </div>
                 : null}
                 <div className="experience-buttons">
-                    <a download="" href="src/pdf/Resume.pdf" className="button button-flex experience-button">
-                        Download CV <i className="uil uil-download-alt button-icon-down"></i>
-                    </a>
+                    <div className="button button-flex experience-button" onClick={resumeSwitch}>
+                        View CV <i className="uil uil-search-plus button-icon"></i>
+                    </div>
 
                     <a href="#contact" className="button button-flex experience-button">
                         Contact Me <i className="uil uil-comment-dots button-icon"></i>
                     </a>
                 </div>
+                {resume ? 
+                    <div className="modal-resume">
+                            <div className="modal-with-scrollbar">
+                                <img src={ResumePic} alt="Resume" className="resume-img" />
+                                <div className="modal-button">
+                                    <a download="" href={Resume} className="button button-flex sidebar-button">
+                                        Download CV <i className="uil uil-download-alt button-icon-down"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <i className="uil uil-times resume-close" onClick={resumeSwitch}></i>
+                    </div>
+                : null}
             </div>
         </div>
     )
