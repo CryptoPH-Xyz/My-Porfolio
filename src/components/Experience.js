@@ -123,15 +123,15 @@ export default function Experience() {
                 </div>
                 {resume ? 
                     <div className="modal-resume">
-                            <div className="modal-with-scrollbar">
-                                <img src={ResumePic} alt="Resume" className="resume-img" />
-                                <div className="modal-button">
-                                    <a download="" href={Resume} className="button button-flex sidebar-button">
-                                        Download CV <i className="uil uil-download-alt button-icon-down"></i>
-                                    </a>
-                                </div>
+                        <div className="modal-with-scrollbar">
+                            <img src={ResumePic} alt="Resume" className="resume-img" />
+                            <div className="modal-button">
+                                <a download="" href={Resume} className="button button-flex sidebar-button">
+                                    Download CV <i className="uil uil-download-alt button-icon-down"></i>
+                                </a>
                             </div>
-                            <i className="uil uil-times resume-close" onClick={resumeSwitch}></i>
+                        </div>
+                        <i className="uil uil-times resume-close" onClick={resumeSwitch}></i>
                     </div>
                 : null}
             </div>
