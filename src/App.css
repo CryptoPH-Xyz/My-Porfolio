@@ -753,3 +753,80 @@ img{
   border-radius: .5rem;
   border: 4px ridge hsl(271, 73%, 28%);
 }
+
+/********************* CONTACT **********************/
+.contact-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-info {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: .75rem;
+}
+
+.contact-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact-subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact-form-container {
+  padding: 0 5rem 0;
+}
+
+.contact-content {
+  background-color: var(--first-color-hover);
+  border-radius: 1rem;
+  padding: 1rem 3rem 1rem;
+  box-shadow: -.2rem .4rem .3rem var(--shadow-color);
+}
+
+.contact-form-header {
+  font-size: var(--h3-font-size);
+  font-style: italic;
+  text-align: center;
+  color: #FFF;
+}
+
+.contact-label {
+  font-size: var(--smaller-font-size);
+  color: #FFF;
+  padding-left: 1rem;
+}
+
+.contact-input {
+  width: 100%;
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  padding: .75rem;
+}
+
+.contact-button {
+  justify-self: center;
+}
+
+.contact-send {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+}
+
+.contact-send:hover {
+  cursor: pointer;
+}
