@@ -830,3 +830,35 @@ img{
 .contact-send:hover {
   cursor: pointer;
 }
+
+/********************* FOOTER **********************/
+.footer-container {
+  background-color: var(--first-color-hover);
+}
+
+.footer-content {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-text, .footer-copyright, .footer-social-icon {
+  color: #FFF;
+  font-weight: var(--font-medium);
+  font-size: 1rem;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-social-icon {
+  padding: 0 .75rem 0;
+}
+
+.footer-text:hover, .footer-social-icon:hover {
+  cursor: pointer;
+  color: var(--first-color-lighter);
+  transform: scale(1.1);
+  transition: .3s;
+}
