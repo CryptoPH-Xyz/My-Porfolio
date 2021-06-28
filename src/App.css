@@ -143,6 +143,17 @@ img{
   align-items: center;
 }
 
+/********************* SWIPER **********************/
+.swiper-pagination-bullet-active {
+  background-color: hsl(176, 80%, 35%) !important;
+}
+
+.autoplay {
+  font-size: var(--smaller-font-size);
+  color: var(--first-color);
+  text-align: right;
+}
+
 /********************* NAVBAR **********************/
 .navbar {
   width: 100%;
@@ -442,11 +453,12 @@ img{
 
 .toggle-button:hover {
   color: var(--first-color);
-  transform: scale(1.2);
+  transform: scale(1.1);
+  transition: .3s;
 }
 
-.experience-icon {
-  font-size: 1.8rem;
+.toggle-icon {
+  font-size: 1.75rem;
   margin-right: 0.25rem;
 }
 
@@ -646,4 +658,16 @@ img{
 .soft-icon-check {
   color: var(--first-color);
   margin-right: .5rem;
+}
+
+/********************* CERTIFICATES **********************/
+.certificate-tabs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.certificate-img {
+  border-radius: .5rem;
+  border: 4px ridge hsl(271, 73%, 28%);
 }

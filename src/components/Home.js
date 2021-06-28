@@ -1,7 +1,7 @@
 import React from 'react';
 import Xyz from '../pictures/Homepage-Xyz.png';
 
-import SwiperCore, { Pagination, EffectCube } from 'swiper';
+import SwiperCore, { Pagination, EffectCube, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,7 +9,7 @@ import 'swiper/swiper.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import 'swiper/components/effect-cube/effect-cube.min.css';
 
-SwiperCore.use([Pagination, EffectCube]);
+SwiperCore.use([Autoplay, Pagination, EffectCube]);
 
 export default function Home() {
     return (
@@ -23,8 +23,13 @@ export default function Home() {
                 <Swiper 
                     effect={'cube'} 
                     grabCursor={true} 
-                    cubeEffect={{shadow: false}} 
-                    pagination={{"type": "fraction"}} >
+                    cubeEffect={{shadow: false,}} 
+                    pagination={{type: "fraction",}}
+                    autoplay={{
+                        delay: 5000,
+                        autoplay: 4000,
+                        disableOnInteraction: true,
+                    }} >
                     <SwiperSlide>
                         <div className="home-data">
                             <div className="home-grid-content">
@@ -46,6 +51,10 @@ export default function Home() {
                                 <div className="home-info">
                                     <span className="home-info-title">08</span>
                                     <span className="home-info-name">Blockchain <br/> Certificates </span>
+                                </div>
+                                <div className="autoplay">
+                                    <i className="uil uil-angle-left autoplay-icon"></i> Swipe to stop autoplay
+                                    <i className="uil uil-angle-right autoplay-icon"></i>
                                 </div>
                             </div>
                         </div>
@@ -70,6 +79,10 @@ export default function Home() {
                                 <div className="home-info">
                                     <span className="home-info-title">80</span>
                                     <span className="home-info-name">Planned Annual <br/> Return (%) </span>
+                                </div>
+                                <div className="autoplay">
+                                    <i className="uil uil-angle-left autoplay-icon"></i> Swipe to stop autoplay
+                                    <i className="uil uil-angle-right autoplay-icon"></i>
                                 </div>
                             </div>
                         </div>
@@ -96,6 +109,10 @@ export default function Home() {
                                     <span className="home-info-title">24</span>
                                     <span className="home-info-name">Kobe <br/> Bryant </span>
                                 </div>
+                                <div className="autoplay">
+                                    <i className="uil uil-angle-left autoplay-icon"></i> Swipe to stop autoplay
+                                    <i className="uil uil-angle-right autoplay-icon"></i>
+                                </div>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -116,7 +133,11 @@ export default function Home() {
                                     The lessons were strict and I was forced to practice for at least 2 hours a day. I started to hate 
                                     playing the piano, and in Highschool I started to learn the guitar by myself. <br/>
                                     Today, I love and play both piano and guitar and music has always been a big part of my life.
-                                </p>                    
+                                </p>
+                                <div className="autoplay">
+                                    <i className="uil uil-angle-left autoplay-icon"></i> Swipe to stop autoplay
+                                    <i className="uil uil-angle-right autoplay-icon"></i>
+                                </div>                  
                             </div>
                         </div>
                     </SwiperSlide>

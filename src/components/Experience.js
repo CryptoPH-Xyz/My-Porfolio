@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Experience() {
-    
+export default function Experience() {   
     const [education, setEducation] = useState(true);
     const [work, setWork] = useState(false);
 
@@ -15,8 +14,6 @@ export default function Experience() {
         setWork(false);
     }
 
-
-    
     return (
         <div className="experience section" id="experience">
             <h2 className="section-title">Experience</h2>
@@ -25,10 +22,10 @@ export default function Experience() {
             <div className="experience-container container">
                 <div className="experience-tabs">
                     <div className="toggle-button button-flex" onClick={educationSwitch}>
-                        <i className="uil uil-graduation-cap experience-icon"></i> Education
+                        <i className="uil uil-graduation-cap toggle-icon"></i> Education
                     </div>
                     <div className="toggle-button button-flex" onClick={workSwitch}>
-                        <i className="uil uil-suitcase-alt experience-icon"></i> Work
+                        <i className="uil uil-suitcase-alt toggle-icon"></i> Work
                     </div>
                 </div>
                 {education ? 

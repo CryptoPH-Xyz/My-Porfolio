@@ -6,7 +6,7 @@ import photo3 from "../pictures/project3.png";
 import photo4 from "../pictures/project4.png";
 import photo5 from "../pictures/project5.png";
 
-import SwiperCore, { Pagination, EffectCoverflow } from 'swiper';
+import SwiperCore, { Pagination, EffectCoverflow, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -14,7 +14,7 @@ import 'swiper/swiper.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import 'swiper/components/effect-coverflow/effect-coverflow.min.css';
 
-SwiperCore.use([Pagination, EffectCoverflow]);
+SwiperCore.use([Autoplay, Pagination, EffectCoverflow]);
 
 export default function Projects() {
     return (
@@ -34,26 +34,13 @@ export default function Projects() {
                     modifier: 1,
                     slideShadows: false,
                 }}
-                pagination={{clickable: true}} >
+                pagination={{clickable: true}} 
+                autoplay={{
+                    delay: 3000,
+                    autoplay: 4000,
+                    disableOnInteraction: true,    
+                }}  >
             
-                <SwiperSlide>
-                    <div className="project-content">
-                        <div className="project-header">
-                            <h3 className="project-title">CryptoCuties</h3>
-                            <div className="project-switch">
-                                Details <i className="uil uil-eye switch-icon"></i>  
-                            </div>
-                        </div>
-                    
-                        <img src={photo1} alt="project" className="project-img"/>
-
-                        <div className="project-buttons">
-                            <a href="https://github.com/CryptoPH-Xyz/Cloning-CryptoKitties" className="button button-flex project-button">
-                                Source code <i className="uil uil-arrow-right button-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </SwiperSlide>
                 <SwiperSlide>
                     <div className="project-content">
                         <div className="project-header">
@@ -67,6 +54,24 @@ export default function Projects() {
 
                         <div className="project-buttons">
                             <a href="https://github.com/CryptoPH-Xyz/Building_DEX" className="button button-flex project-button">
+                                Source code <i className="uil uil-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="project-content">
+                        <div className="project-header">
+                            <h3 className="project-title">CryptoCuties</h3>
+                            <div className="project-switch">
+                                Details <i className="uil uil-eye switch-icon"></i>  
+                            </div>
+                        </div>
+                    
+                        <img src={photo1} alt="project" className="project-img"/>
+
+                        <div className="project-buttons">
+                            <a href="https://github.com/CryptoPH-Xyz/Cloning-CryptoKitties" className="button button-flex project-button">
                                 Source code <i className="uil uil-arrow-right button-icon"></i>
                             </a>
                         </div>
@@ -127,7 +132,6 @@ export default function Projects() {
                     </div>
                 </SwiperSlide>
                 <br/>
-                ...
             </Swiper>
         </div>
 

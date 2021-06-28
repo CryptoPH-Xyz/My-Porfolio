@@ -102,12 +102,12 @@ export default function Navbar() {
                         </li>
                         <li className="nav-item">
                             <a href="#skills" className="nav-link" onClick={handleMenu}>
-                            <i className="uil uil-file-check nav-icon"></i> Skills
+                            <i className="uil uil-award nav-icon"></i> Skills
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a href="#hobbies" className="nav-link" onClick={handleMenu}>
-                            <i className="uil uil-heart-sign nav-icon"></i> Hobbies
+                            <a href="#certificates" className="nav-link" onClick={handleMenu}>
+                            <i className="uil uil-graduation-cap nav-icon"></i> Certificates
                             </a>
                         </li>
                         <li className="nav-item">
