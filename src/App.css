@@ -154,7 +154,7 @@ img{
 }
 
 .nav {
-  height: 4rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -163,8 +163,8 @@ img{
 }
 
 .nav-avatar {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -351,26 +351,32 @@ img{
   align-self: center;
 }
 
+.home-data {
+  padding: 1rem 4rem 0;
+}
+
 .home-grid-content {
   padding: 0 2rem 1rem;
   box-shadow: -.2rem .4rem .3rem var(--shadow-color);
   border: .1rem solid var(--shadow-color);
   border-radius: 1rem;
+  background-color: var(--body-color);
+}
+
+.home-grid-header, .home-description {
+  text-align: center;
+  padding: 1rem 0 .5rem;
+}
+
+.home-grid-header {
+  color: var(--first-color);
+  font-weight: var(--font-medium);
 }
 
 .home-icon {
   font-size: 1.5rem;
   color: var(--first-color-second);
-}
-
-.home-grid-header, .home-description {
-  text-align: center;
-  padding: 1rem 0 1rem;
-}
-
-.home-grid-header {
-  color: var(--first-color-second);
-  font-weight: var(--font-medium);
+  padding: 0 .15rem 0;
 }
 
 .home-grid-title {
@@ -404,20 +410,8 @@ img{
   color: var(--second-color);
 }
 
-.home-buttons {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.home-button:hover .button-icon {
-  transform: translateX(.25rem);
-}
-
-.home-button:hover .button-icon-down {
-  transform: translateY(.25rem);
-}
-
 .home-social {
+  padding: 1.25rem 0 0;
   display: flex;
   justify-content: center;
 }
@@ -440,13 +434,13 @@ img{
   margin-bottom: 2rem;
 }
 
-.experience-button {
+.toggle-button {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
 }
 
-.experience-button:hover {
+.toggle-button:hover {
   color: var(--first-color);
   transform: scale(1.2);
 }
@@ -497,6 +491,20 @@ img{
   height: 100%;
   background-color: var(--first-color);
   transform: translate(6px, -7px);
+}
+
+.experience-buttons {
+  padding: 1rem 0 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.experience-button:hover .button-icon {
+  transform: translateX(.25rem);
+}
+
+.experience-button:hover .button-icon-down {
+  transform: translateY(.25rem);
 }
 
 /********************* PROJECT **********************/
