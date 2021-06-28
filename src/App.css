@@ -161,7 +161,7 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: var(--container-color);
 }
 
 .nav {
@@ -178,12 +178,13 @@ img{
   height: 3rem;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 1px 1px 3px var(--shadow-color);
 }
 
 .nav-avatar:hover {
   cursor: pointer;
-  box-shadow: 1px 1px 3px var(--shadow-color);
   transform: scale(1.1);
+  transition: .3s;
 }
 
 .nav-toggle {
@@ -203,7 +204,7 @@ img{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--body-color);
+    background-color: var(--container-color);
     padding: 2rem 1.5rem 2rem;
     box-shadow: 0 1px 5px var(--shadow-color);
     border-radius: 0 0 1.5rem 1.5rem;
@@ -256,7 +257,7 @@ img{
   width: 24vw;
   min-width: 20rem;
   height: 100vh;
-  background-color: var(--body-color);
+  background-color: var(--container-color);
   padding: 2rem 1.5rem 2rem;
   box-shadow: 1px 0 5px var(--shadow-color);
   border-radius: 0 1.5rem 1.5rem 0;
@@ -371,7 +372,7 @@ img{
   box-shadow: -.2rem .4rem .3rem var(--shadow-color);
   border: .1rem solid var(--shadow-color);
   border-radius: 1rem;
-  background-color: var(--body-color);
+  background-color: var(--container-color);
 }
 
 .home-grid-header, .home-description {
@@ -525,7 +526,7 @@ img{
   box-shadow: -.2rem .4rem .3rem var(--shadow-color);
   border: .1rem solid var(--shadow-color);
   border-radius: 1rem;
-  background-color: var(--body-color);
+  background-color: var(--container-color);
 }
 
 .project-header {
@@ -542,6 +543,8 @@ img{
   color: var(--first-color-hover);
   font-size: var(--font-semi-bold);
   cursor: pointer;
+  transform: scale(1.1);
+  transition: .3s;
 }
 
 .project-img {
@@ -557,6 +560,85 @@ img{
 
 .project-button:hover .button-icon {
   transform: translateX(.25rem);
+}
+
+/********************* MODAL **********************/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  transition: .3s;
+}
+
+.modal-container {
+  position: relative;
+  background-color: var(--container-color);
+  border-radius: .5rem;
+  padding: 1.5rem;
+  border: 3px solid var(--first-color-lighter);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+}
+
+.modal-title-section {
+  display: flex;
+  padding: 0 2rem 0 0;
+}
+
+.modal-logo {
+  font-size: 1.25rem;
+  padding-right: .25rem;
+  color: var(--first-color);
+}
+
+.modal-title {
+  font-size: var(--h3-font-size);
+  color: var(--text-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.modal-close {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.modal-close:hover {
+  color: var(--first-color);
+  transform: scale(1.1);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.modal-item {
+  display: flex;
+  align-items: center;
+}
+
+.modal-item-description {
+  font-size: var(--small-font-size);
+}
+
+.ongoing-icon {
+  color: rgb(173, 19, 19);
+  margin-right: .5rem;
 }
 
 /********************* SKILLS **********************/
@@ -582,7 +664,7 @@ img{
 
 .skills-arrow {
   margin-left: auto;
-  transition: .4s;
+  transition: .3s;
 }
 
 .skills-arrow:hover {

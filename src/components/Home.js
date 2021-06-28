@@ -42,15 +42,15 @@ export default function Home() {
                                 </div>
                                 <p className="home-description">                      
                                     Aspiring Blockchain & Smart Contract developer that uses Solidity to build 
-                                    secure DApps such as Decentralized Exchanges <b> (DEX)</b>,
+                                    secure DApps such as Decentralized Exchanges (<b>DEX</b>),
                                     Crypto-Wallets, and NFTs.<br/>
                                     Having an<b> Economics</b> background helps me to identify & exploit business 
                                     opportunities caused by market inefficiencies, and predict, to certain degree,
                                     how the market would respond and its significance to the economy.
                                 </p>
                                 <div className="home-info">
-                                    <span className="home-info-title">08</span>
-                                    <span className="home-info-name">Blockchain <br/> Certificates </span>
+                                    <span className="home-info-title">07</span>
+                                    <span className="home-info-name">Projects <br/> Completed / Ongoing </span>
                                 </div>
                                 <div className="autoplay">
                                     <i className="uil uil-angle-left autoplay-icon"></i> Swipe to stop autoplay
