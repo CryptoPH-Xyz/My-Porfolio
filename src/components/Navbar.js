@@ -106,7 +106,7 @@ export default function Navbar() {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a href="#certificates" className="nav-link" onClick={handleMenu}>
+                            <a href="#hobbies" className="nav-link" onClick={handleMenu}>
                             <i className="uil uil-heart-sign nav-icon"></i> Hobbies
                             </a>
                         </li>

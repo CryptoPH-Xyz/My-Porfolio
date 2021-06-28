@@ -115,8 +115,7 @@ export default function Home() {
                                     I started playing the piano when I was 5 years old. My Mom, a superb pianist was my one and only teacher.
                                     The lessons were strict and I was forced to practice for at least 2 hours a day. I started to hate 
                                     playing the piano, and in Highschool I started to learn the guitar by myself. <br/>
-                                    Today, I play both piano and guitar and I loved how my mom was patient enough to teach the piano because 
-                                    I have used it in many parts of my life.
+                                    Today, I love and play both piano and guitar and music has always been a big part of my life.
                                 </p>                    
                             </div>
                         </div>
