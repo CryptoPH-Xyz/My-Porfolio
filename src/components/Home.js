@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Xyz from '../pictures/Homepage-Xyz.png';
 
 import SwiperCore, { Pagination, EffectCube, Autoplay } from 'swiper';
@@ -12,6 +12,34 @@ import 'swiper/components/effect-cube/effect-cube.min.css';
 SwiperCore.use([Autoplay, Pagination, EffectCube]);
 
 export default function Home() {
+    const [Days, setDays] = useState('00');
+    const [Hours, setHours] = useState('00');
+    const [Minutes, setMinutes] = useState('00');
+    const [Seconds, setSeconds] = useState('00');
+  
+    useEffect(() => {
+      const birthday = new Date(`August 2, 2021 00:00:00`).getTime();
+      //update every second
+      setInterval(function() {
+        //get tday's date and time
+        const now = new Date().getTime();
+  
+        //diiference between now and launch date
+        const diff = birthday - now;
+  
+        const d = Math.floor(diff / 1000 / 60 / 60 / 24 );
+        const h = Math.floor((diff / 1000 / 60 / 60 ) % 24);
+        const m = Math.floor((diff / 1000 / 60 ) % 60);
+        const s = Math.floor((diff / 1000 ) % 60);
+  
+        //so all values have 2 digits
+        setDays(d < 10 ? '0' + d : d);
+        setHours(h < 10 ? '0' + h : h);
+        setMinutes(m < 10 ? '0' + m : m);
+        setSeconds(s < 10 ? '0' + s : s);
+  
+      }, 1000);
+    }, []);
     return (
         <div className="home section" id="home">
             <h2 className="section-title">Xyz Fiegalan</h2>
@@ -134,6 +162,43 @@ export default function Home() {
                                     playing the piano, and in Highschool I started to learn the guitar by myself. <br/>
                                     Today, I love and play both piano and guitar and music has always been a big part of my life.
                                 </p>
+                                <div className="autoplay">
+                                    <i className="uil uil-angle-left autoplay-icon"></i> Swipe to stop autoplay
+                                    <i className="uil uil-angle-right autoplay-icon"></i>
+                                </div>                  
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="home-data">
+                            <div className="home-grid-content">
+                                <div  className="home-grid-header">
+                                    <div>
+                                        <h3 className="home-grid-title">My Birthday</h3>
+                                        <span className="home-grid-subtitle">August 02, 1998</span>
+                                    </div>
+                                    <i className="uil uil-gift home-icon"></i>
+                                </div>
+                                <div className="birthday-container">
+                                    <div className="birthday-timer">
+                                        <div className="time">
+                                            <h3 className="days">{Days}</h3>
+                                            <small>Days</small>
+                                        </div>
+                                        <div className="time">
+                                            <h3 className="hours">{Hours}</h3>
+                                            <small>Hours</small>
+                                        </div>
+                                        <div className="time">
+                                            <h3 className="minutes">{Minutes}</h3>
+                                            <small>Minutes</small>
+                                        </div>
+                                        <div className="time">
+                                            <h3 className="seconds">{Seconds}</h3>
+                                            <small>Seconds</small>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className="autoplay">
                                     <i className="uil uil-angle-left autoplay-icon"></i> Swipe to stop autoplay
                                     <i className="uil uil-angle-right autoplay-icon"></i>

@@ -470,6 +470,29 @@ img{
   color: var(--second-color);
 }
 
+.birthday-container {
+  display: flex;
+  justify-content: center;
+}
+
+.birthday-timer {
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+}
+
+.time {
+  padding: 1rem 1rem 0;
+}
+
+.days, .hours, .minutes, .seconds {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--first-color);
+}
+
 .home-social {
   padding: 1.25rem 0 0;
   display: flex;
