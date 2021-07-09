@@ -810,7 +810,7 @@ img{
 
 .certificate-img {
   border-radius: .5rem;
-  border: 4px ridge hsl(271, 73%, 28%);
+  border: 2px ridge hsl(271, 73%, 28%);
 }
 
 /********************* CONTACT **********************/

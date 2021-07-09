@@ -10,6 +10,8 @@ import cert7 from '../pictures/certificates/cert7.png';
 import cert8 from '../pictures/certificates/cert8.png';
 import cert9 from '../pictures/certificates/cert9.png';
 
+import techcert1 from '../pictures/certificates/tech-cert1.png';
+
 import SwiperCore, { Pagination, EffectCoverflow } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -50,7 +52,7 @@ export default function Certificates() {
             grabCursor="true"
             effect={"coverflow"}
             centeredSlides={true}
-            slidesPerView={4}
+            slidesPerView={3}
             loop={true}
             coverflowEffect={{
                 rotate: 5,
@@ -92,11 +94,30 @@ export default function Certificates() {
                     <img src={cert9} alt="certificate" className="certificate-img"/>
                 </SwiperSlide>
                 <br/>
-                ...
             </Swiper>
             : null}
             {other ? 
-                <h1>Coming Soon</h1>
+                <Swiper
+                grabCursor="true"
+                effect={"coverflow"}
+                centeredSlides={true}
+                slidesPerView={2}
+                loop={false}
+                coverflowEffect={{
+                    rotate: 5,
+                    stretch: 20,
+                    depth: 75,
+                    modifier: 1,
+                    slideShadows: false,
+                }}
+                pagination={{
+                    clickable: true, 
+                    type: "fraction",
+                }} >
+                    <SwiperSlide> 
+                        <img src={techcert1} alt="certificate" className="certificate-img"/>
+                    </SwiperSlide>
+                </Swiper>
             : null}
         </div>
 
