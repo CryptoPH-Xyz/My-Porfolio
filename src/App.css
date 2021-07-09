@@ -210,10 +210,10 @@ img{
 }
 
 .nav-menu-link {
-  padding: .25rem .5rem;
+  padding: .25rem .75rem;
   color: var(--first-color-hover);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: .9rem;
 }
 
 .nav-menu-link:hover {
@@ -654,14 +654,13 @@ img{
 }
 
 .resume-close {
-  color: #FFF;
+  color: rgb(226, 77, 77);
   border-radius: .5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0 .7rem 0;
 }
 
 .resume-close:hover {
-  color: red;
   cursor: pointer;
   transition: .3s;
 }
@@ -872,6 +871,8 @@ img{
 
 .contact-form-container {
   padding: 0 5rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-content {

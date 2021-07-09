@@ -11,6 +11,7 @@ export default function ContactForm() {
           }, (error) => {
               console.log(error.text);
           });
+          alert("Your Message has been sent!");
           e.target.reset();
     }
 
