@@ -18,28 +18,31 @@ export default function Home() {
     const [Seconds, setSeconds] = useState('00');
   
     useEffect(() => {
-      const birthday = new Date(`August 2, 2021 00:00:00`).getTime();
-      //update every second
-      setInterval(function() {
-        //get tday's date and time
-        const now = new Date().getTime();
-  
-        //diiference between now and launch date
-        const diff = birthday - now;
-  
-        const d = Math.floor(diff / 1000 / 60 / 60 / 24 );
-        const h = Math.floor((diff / 1000 / 60 / 60 ) % 24);
-        const m = Math.floor((diff / 1000 / 60 ) % 60);
-        const s = Math.floor((diff / 1000 ) % 60);
-  
-        //so all values have 2 digits
-        setDays(d < 10 ? '0' + d : d);
-        setHours(h < 10 ? '0' + h : h);
-        setMinutes(m < 10 ? '0' + m : m);
-        setSeconds(s < 10 ? '0' + s : s);
-  
-      }, 1000);
-    }, []);
+        const currentYear = new Date().getUTCFullYear();
+        const birthday = new Date(`August 2, ${currentYear + 1} 12:00 AM`);
+        //update every second
+        setInterval(function () {
+          //get today's local date and time
+          var now = new Date();
+          //set time to UTC in all areas
+          //var nowUTC = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
+    
+          //diiference between now and launch date
+          var diff = birthday - now;
+    
+          var d = Math.floor(diff / 1000 / 60 / 60 / 24);
+          var h = Math.floor((diff / 1000 / 60 / 60) % 24);
+          var m = Math.floor((diff / 1000 / 60) % 60);
+          var s = Math.floor((diff / 1000) % 60);
+    
+          //so all values have 2 digits
+          setDays(d < 10 ? "0" + d : d);
+          setHours(h < 10 ? "0" + h : h);
+          setMinutes(m < 10 ? "0" + m : m);
+          setSeconds(s < 10 ? "0" + s : s);
+
+        }, 1000);
+      }, []);
     return (
         <div className="home section" id="home">
             <h2 className="section-title">Xyz Fiegalan</h2>
