@@ -248,9 +248,15 @@ export default function Projects() {
                                 </p>
                             </div>
                             <div className="modal-item">
+                                <i className="uil uil-check-circle soft-icon-check"></i>
+                                <p className="modal-item-description">
+                                    Added Marketplace contract and set to multiple pages
+                                </p>
+                            </div>
+                            <div className="modal-item">
                                 <i className="uil uil-times-circle ongoing-icon"></i>
                                 <p className="modal-item-description">
-                                    No Marketplace and other key features yet 
+                                    No Marketplace UI yet
                                     (Project status: Ongoing) 
                                 </p>
                             </div>

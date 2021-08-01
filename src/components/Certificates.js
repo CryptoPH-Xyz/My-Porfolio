@@ -9,6 +9,7 @@ import cert6 from '../pictures/certificates/cert6.png';
 import cert7 from '../pictures/certificates/cert7.png';
 import cert8 from '../pictures/certificates/cert8.png';
 import cert9 from '../pictures/certificates/cert9.png';
+import cert10 from '../pictures/certificates/cert10.png';
 
 import techcert1 from '../pictures/certificates/tech-cert1.png';
 
@@ -92,6 +93,9 @@ export default function Certificates() {
                 </SwiperSlide>
                 <SwiperSlide> 
                     <img src={cert9} alt="certificate" className="certificate-img"/>
+                </SwiperSlide>
+                <SwiperSlide> 
+                    <img src={cert10} alt="certificate" className="certificate-img"/>
                 </SwiperSlide>
                 <br/>
             </Swiper>
