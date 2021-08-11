@@ -108,8 +108,24 @@ export default function Experience() {
                             </div>
                             <div>
                                 <span className="experience-rounder"></span>
+                                <span className="experience-line"></span> 
                             </div>
                         </div>
+
+                        <div className="experience-data">
+                            <div></div>
+                            <div>
+                                <span className="experience-rounder"></span>                                    
+                            </div>
+                            <div>
+                                <div className="experience-calendar">
+                                    <i className="uil uil-calendar-alt"></i> 2021 (July - Present)
+                                </div>
+                                <h3 className="experience-title">Blockchain & Frontend Developer</h3>
+                                <span className="experience-subtitle">Mirage Foundation (Startup)</span>
+                            </div>
+                        </div>
+
                     </div>
                 : null}
                 <div className="experience-buttons">

@@ -25,10 +25,10 @@ export default function Home() {
           //get today's local date and time
           var now = new Date();
           //set time to UTC in all areas
-          //var nowUTC = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
+          var nowUTC = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
     
           //diiference between now and launch date
-          var diff = birthday - now;
+          var diff = birthday - nowUTC;
     
           var d = Math.floor(diff / 1000 / 60 / 60 / 24);
           var h = Math.floor((diff / 1000 / 60 / 60) % 24);
