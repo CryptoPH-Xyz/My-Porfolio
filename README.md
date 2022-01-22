@@ -1,4 +1,5 @@
-### Click [here](https://cryptoph-xyz.github.io/My-Portfolio/) to view Project
+## Click [here](https://cryptoph-xyz.github.io/My-Portfolio/) to view Project
+Note: Portfolio Details have not been updated since <b>August 2021</b>
 
 ### Packages installed
 
